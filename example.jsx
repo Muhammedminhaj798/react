@@ -1,27 +1,72 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Project from "./project";
 
-function Loggin({ role }){
-    // switch(role){
-    //     case "admin":
-    //         return <h1>welcome,admin</h1>
-    //     case "user":
-    //         return <h1>Welcome, user</h1>
-    //     default:
-    //         return <h1>Access denied</h1>
+function Loggin(){
+    // const [data,setData] = useState([])
+    // const [loading, setLoading] = useState(true)
+
+    // useEffect(() => {
+    //     const fetchData = async() => {
+    //         try{
+    //             const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    //             const result = await response.json();
+    //             setData(result)
+    //             setLoading(false)
+    //         }catch (error){
+    //             console.error("Error fetching data: " , error );
+    //             setLoading(false)
+                
+    //         }
+    //     }
+
+    //     fetchData();    
+    // },[])
+    // if(loading){
+    //     return <p>Loading....</p>
     // }
-    const inputref = useRef(null)
-    console.log(inputref)
-    const click =(e)=>{
-        console.log()
 
-        inputref.current.focus()
-    }
-    return(
-       <React.Fragment>
-         <input type="text"  ref={inputref}/>
-         <button onClick={click}>clik</button>
-       </React.Fragment>
-    )
+    // return(
+    //     <div>
+    //         <h1>Posts</h1>
+    //         <ul>
+    //             {data.map((post) => (
+    //                 <li key={post.id}>{post.title}</li>
+    //             ))}
+    //         </ul>
+    //     </div>
+    // )
+
+    // const [data,setData] = useState([]);
+    // const [loading, setLoading] = useState(true)
+
+    // useEffect(() => {
+    //     const fetchData = async()=> {
+    //     try{
+    //         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    //         const result = await response.json();
+    //         setData(result)
+    //         setLoading(false)
+    //     }catch(error){
+    //         console.error("Post error is : ", error)
+    //     }
+    // }
+    // fetchData()
+    // }, [])
+    // if(loading){
+    //     return <h1>loading.....</h1>
+    // }
+    // return(
+    //     <div>
+    //         <h1>Post</h1>
+    //         <ul>
+    //             {data.map((post) => (
+    //                 <li key={post.id}>{post.title}</li>
+    //             ))}
+    //         </ul>
+    //     </div>
+    // )
+    
 }
+
 
 export default Loggin;
